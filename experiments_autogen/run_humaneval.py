@@ -38,7 +38,7 @@ def load_config(config_path):
     
 def parse_args():
     parser = argparse.ArgumentParser(description="AgentPrune Experiments on HumanEval")
-    parser.add_argument("--dataset_json", type=str, default="dataset/humaneval/humaneval-py.jsonl")
+    parser.add_argument("--dataset_json", type=str, default=f"{AgentPrune_ROOT}/dataset/humaneval/humaneval-py.jsonl")
     parser.add_argument("--result_file", type=str, default=None)
     parser.add_argument("--llm_name", type=str, default="gpt-4o-mini")
     parser.add_argument('--mode', type=str, default='Chain',

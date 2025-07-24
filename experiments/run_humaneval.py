@@ -39,6 +39,7 @@ def load_config(config_path):
 def parse_args():
     parser = argparse.ArgumentParser(description="AgentPrune Experiments on HumanEval")
     parser.add_argument("--dataset_json", type=str, default="dataset/humaneval/humaneval-py.jsonl")
+    # 默认路径修改为绝对路径
     parser.add_argument("--result_file", type=str, default=None)
     parser.add_argument("--llm_name", type=str, default="gpt-4-1106-preview")
     parser.add_argument('--mode', type=str, default='FullConnected',

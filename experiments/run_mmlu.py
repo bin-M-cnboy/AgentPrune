@@ -71,7 +71,9 @@ async def main():
                   optimized_spatial=args.optimized_spatial,
                   optimized_temporal=args.optimized_temporal,
                   **kwargs)
-    download()
+
+    # download()
+
     dataset_train = MMLUDataset('dev')
     dataset_val = MMLUDataset('val')
     

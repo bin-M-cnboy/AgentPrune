@@ -11,7 +11,8 @@ class MMLUDataset(ABC):
 
         self._split = split
 
-        data_path = f"dataset/MMLU/data/{self._split}/"
+        # 修改加载路径
+        data_path = f"Lab1/dataset/MMLU/data/{self._split}/"
         self._total_df: pd.DataFrame = self._load_data(data_path)
 
     @staticmethod

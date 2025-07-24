@@ -38,7 +38,8 @@ def load_config(config_path):
     
 def parse_args():
     parser = argparse.ArgumentParser(description="AgentPrune Experiments on gsm8k")
-    parser.add_argument("--dataset_json", type=str, default="dataset/gsm8k/gsm8k.jsonl")
+    parser.add_argument("--dataset_json", type=str, default=str(AgentPrune_ROOT / "dataset/gsm8k/gsm8k.jsonl"))
+    # 默认路径修改为绝对路径
     parser.add_argument("--result_file", type=str, default=None)
     parser.add_argument("--llm_name", type=str, default="gpt-4o-mini")
     parser.add_argument('--mode', type=str, default='Chain',
